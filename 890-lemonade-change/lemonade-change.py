@@ -1,0 +1,27 @@
+class Solution:
+    def lemonadeChange(self, bills: List[int]) -> bool:
+        five_count = 0
+        ten_count = 0
+
+        for bill in bills:
+            if bill == 5:
+                five_count += 1
+            elif bill == 10:
+                if five_count > 0:
+                    five_count -= 1
+                    ten_count += 1
+                else:
+                    return False
+            elif bill == 20:
+                # Try to give change with one $10 and one $5 first
+                if ten_count > 0 and five_count > 0:
+                    ten_count -= 1
+                    five_count -= 1
+                # Otherwise, give change with three $5 bills
+                elif five_count >= 3:
+                    five_count -= 3
+                else:
+                    return False
+
+        return True
+        
