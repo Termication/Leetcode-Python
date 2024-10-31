@@ -2,6 +2,7 @@
 
 <p>Given an integer array <code>nums</code>, return <em>the maximum width of a <strong>ramp</strong> in </em><code>nums</code>. If there is no <strong>ramp</strong> in <code>nums</code>, return <code>0</code>.</p>
 
+
 <p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
 
@@ -12,6 +13,7 @@
 </pre>
 
 <p><strong class="example">Example 2:</strong></p>
+
 
 <pre>
 <strong>Input:</strong> nums = [9,8,1,0,1,9,4,0,4,1]
