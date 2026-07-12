@@ -1,12 +1,8 @@
-class Solution:
-    def arrayRankTransform(self, arr: List[int]) -> List[int]:
-        '''Replaces each element in the array with its rank.'''
-        # Create a sorted list of unique elements in the array
-        sorted_unique = sorted(set(arr))
-
-        # Create a dictionary that maps each element to its rank
-        rank_map = {value: rank + 1 for rank, value in enumerate(sorted_unique)}
-
-        # Replace each element in the original array with its rank
-        return [rank_map[num] for num in arr]
-        
+class Solution(object):
+    def arrayRankTransform(self, arr):
+        """
+        :type arr: List[int]
+        :rtype: List[int]
+        """
+        rank = {v: i+1 for i, v in enumerate(sorted(set(arr)))}
+        return [rank[x] for x in arr]
